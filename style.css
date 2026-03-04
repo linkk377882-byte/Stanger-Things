@@ -1,0 +1,230 @@
+.banner {
+  position: relative;
+  max-width: 1200px;
+  width: calc(100% - 48px);
+  height: 62vh;
+  min-height: 360px;
+  max-height: 560px;
+  margin: 28px auto 0;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+  overflow: hidden;
+}
+
+.banner:hover {
+  filter: blur(3px);
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
+}
+
+.banner-text {
+  position: relative;
+  max-width: 1200px;
+  width: calc(100% - 48px);
+  margin: 18px auto 36px;
+  text-align: center;
+  color: #FF2E2E;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.75);
+  padding: 14px 28px;
+
+}
+
+.banner-text h1 {
+  font-size: clamp(2rem, 4.2vw, 3.5rem);
+  margin: 0;
+  white-space: nowrap;
+  letter-spacing: 1.2px;
+}
+
+
+.season {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 64px;
+  padding: 32px;
+  background-color: #1E193C; 
+  border-left: 5px solid #FF1515; 
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+}
+
+.season-text {
+  flex: 1;
+  padding-right: 32px;
+  color: #e1e9e4; 
+}
+
+.season-text h2 {
+  color: #FF1515; 
+}
+
+.season-media {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 22px;
+}
+
+.season-image {
+  flex: 0 0 auto;
+  text-align: left;
+}
+
+.season-image img {
+  width: 270px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  max-width: 100%;
+  display: block;
+  border: 3px solid #3A5FE5; 
+  border-radius: 8px;
+}
+
+.season-links {
+  width: 240px;
+  height: 405px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.season-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(58, 95, 229, 0.75);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(20, 17, 46, 0.65);
+  margin: 20px 0; /* Add vertical spacing between videos */
+}
+
+.season-video iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+.season-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 124px;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #e1e9e4;
+  border: 1px dashed rgba(58, 95, 229, 0.8);
+  border-radius: 10px;
+  background-color: rgba(20, 17, 46, 0.55);
+  transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.season-link:hover {
+  color: #FFD700;
+  border-color: #FF1515;
+  transform: translateY(-3px);
+}
+
+#characters {
+  max-width: 1200px;
+  margin: 0 auto 72px;
+  padding: 48px 24px;
+  background-color: #14112E;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+}
+
+#characters .section-title {
+  margin: 0;
+  text-align: center;
+  color: #FF1515;
+  font-size: 2.2rem;
+}
+
+#characters .section-divider {
+  width: 120px;
+  height: 3px;
+  margin: 14px auto 36px;
+  border: 0;
+  border-radius: 999px;
+  background-color: #3A5FE5;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 每行两个人物 */
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.character-card {
+  display: flex; /* 横向排列：头像在左，文字区在右 */
+  align-items: stretch;
+  background-color: #1E193C;
+  border: 1px solid rgba(58, 95, 229, 0.35);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(255,21,21,0.6);
+}
+
+.character-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+  border-radius: 50%;
+  border: 4px solid #3A5FE5;
+  margin-right: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.character-card:hover .character-img {
+  transform: scale(1.1);
+  border-color: #FF1515;
+}
+
+.character-details {
+  display: flex;
+  flex: 1;
+  min-height: 120px;
+  flex-direction: column; /* 垂直结构：名字、台词、简介上下排列 */
+  justify-content: space-between;
+  text-align: left;
+}
+
+.character-name {
+  color: #FF1515; /* 红色名字 */
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.character-quote {
+  color: #FFD700; /* 金黄色台词 */
+  font-size: 1.1rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.character-info {
+  color: #FFFFFF; /* 白色简介 */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
